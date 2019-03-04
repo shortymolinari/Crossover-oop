@@ -9,11 +9,12 @@ use Crossover\FinalKeyword\FinalTrait;
 
 class extendsFinal extends FinalKeyword {
 
-    use FinalTrait;
+    //use FinalTrait;
 
-    /*public function moreTesting(){
+    public function moreTesting(){
+        parent::moreTesting();
         echo 'Sobreescribiendo método final';
-    }*/
+    }
 
 }
 

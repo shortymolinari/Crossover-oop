@@ -4,7 +4,7 @@ namespace Crossover\FinalKeyword;
 
 require "../../vendor/autoload.php";
 
-final class FinalKeyword
+class FinalKeyword
 {
     //final public $property = "can call an final public property";
     //final const FINAL_CONST = "Can declare an final conts";

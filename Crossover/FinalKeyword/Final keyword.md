@@ -22,3 +22,4 @@ antecediendo su definición con final. Si la propia clase se define como final, 
 12. Heredar un método final => **OK**
 13. Sobreescibir un método final => **Fatal error**
 14. Sobreescribir un método final desde un trait => **Fatal error**
+15. Sobreescribir un método final usando 'parent::' => **Fatal error**
