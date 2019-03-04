@@ -1,0 +1,19 @@
+{
+    "name": "shortymolinari/crossover-oop",
+    "description": "Posibles formas de conectar todos los conceptos de la OOP en PHP",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Crossover\\": "Crossover/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Edwin Arley Rincón Henao",
+            "email": "shortymolinari@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
