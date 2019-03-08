@@ -10,9 +10,11 @@ class MultipleCosntructor{
     public $method;
 
     function __construct(){ 
+        
         $params = func_get_args(); 
         $i = func_num_args();
         $this->method = '__construct' . $i;
+
         if (method_exists($this, $this->method)) { 
             call_user_func_array(array($this, $this->method), $params);
         } 
