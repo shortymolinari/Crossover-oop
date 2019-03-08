@@ -5,18 +5,18 @@ namespace Crossover\Constructor;
 
 require "../../vendor/autoload.php";
 
-class MultipleCosntructor{
+class MultipleCosntruct{
 
     public $method;
 
     function __construct(){ 
         
         $params = func_get_args(); 
-        $i = func_num_args();
-        $this->method = '__construct' . $i;
+        $number = func_num_args();
+        $this->method = "__construct{$number}";
 
         if (method_exists($this, $this->method)) { 
-            call_user_func_array(array($this, $this->method), $params);
+            call_user_func_array([$this, $this->method], $params);
         } 
     } 
     
@@ -33,11 +33,11 @@ class MultipleCosntructor{
     } 
 } 
 
-$object = new MultipleCosntructor('sheep'); 
-$object = new MultipleCosntructor('sheep', 'cat'); 
-$object = new MultipleCosntructor('sheep', 'cat', 'dog'); 
+$object = new MultipleCosntruct('Edwin'); 
+$object = new MultipleCosntruct('Edwin', 'Jorge'); 
+$object = new MultipleCosntruct('Edwin', 'Jorge', 'Flavio'); 
 
-// results: 
-// __construct with 1 param called: sheep 
-// __construct with 2 params called: sheep,cat 
-// __construct with 3 params called: sheep,cat,dog 
+
+// __construct with 1 param called: Edwin
+// __construct with 2 params called: Edwin, Jorge
+// __construct with 3 params called: Edwin, Jorge, Flavio

@@ -20,9 +20,9 @@ class Person{
     }
 
     public function getPerson(){
-
-        echo "Persona: {$this->name} {$this->lastName} {$this->age}" . PHP_EOL;
-
+        if ($this->name != '') {
+            echo "Persona: {$this->name} {$this->lastName} {$this->age}" . PHP_EOL;
+        }
     }
 
     public function getAge(){
@@ -34,20 +34,22 @@ class Skills extends Person{
 
     public $skills = [];
 
-    public function __construct(array $skills, string $name = '', string $lastName = '', int $age = null){
+    public function __construct(array $skills, string $name = '', string $lastName = '', int $age = 0){
         $age = $this->getAge();
-        parent::__construct($name, $lastName, $age);
+        parent::__construct($name, $lastName, $age = 0);
         $this->skills = $skills;
     }
 
     public function getPerson(){
-        $this->person->getPerson();
+        parent::getPerson();
         $printSkills  = implode(", ", $this->skills);
-        echo "Skills: {$printSkills} {$this->person->name}" . PHP_EOL;
+        echo "Skills: {$printSkills}" . PHP_EOL;
     }
 }
 
-$person = new \Crossover\Constructor\Person('Edwin', 'Rincón', 31);
+$person = new \Crossover\Constructor\Person('Raul', 'Gazca', 31);
+
 $skills = new \Crossover\Constructor\Skills(['Playing guitar', 'sing in the shower', 'Cook',  'sleep at work']);
+
 $skills->getPerson();
 
