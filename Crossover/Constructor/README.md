@@ -71,7 +71,7 @@
 7. Instanciar la clase, acceder propiedad private del padre llamando un método público heredado del padre desde objeto => **Ok**
 
 
-### \#Others
+### Others
 
 #### Clase con constructor extiende. El padre tiene constructor que requiere parámetros
 1. Instanciar la clase, pasarle todos los parámetros y luego cambiar propiedades que solo tiene la clase padre => **OK, se logran cambiar los valores del padre**
