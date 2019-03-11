@@ -75,10 +75,12 @@
 
 #### Clase con constructor extiende. El padre tiene constructor que requiere parámetros
 1. Instanciar la clase, pasarle todos los parámetros y luego cambiar propiedades que solo tiene la clase padre => **OK, se logran cambiar los valores del padre**
-2. Instanciar una clase con constructor => **Ok, se ejecuta el constructor**
-3. Instanciar una clase vacía que extiende un clase con constructor => **Ok, se ejecuta el constructor del padre**
-4. Instaciar una clase y llamar el constructor del padre desde un método propio => **Se ejecuta el constructor del padre**
-5. Instaciar una clase sobre escribir el constructor y llamar el constructor del padre desde un método propio =>
+
+#### Clase con constructor sin parámetros (Clases regulares)
+1. Instanciar una clase con constructor => **Ok, se ejecuta el constructor**
+2. Instanciar una clase vacía que extiende un clase con constructor => **Ok, se ejecuta el constructor del padre**
+3. Instaciar una clase y llamar el constructor del padre desde un método propio => **Se ejecuta el constructor del padre**
+4. Instaciar una clase sobre escribir el constructor y llamar el constructor del padre desde un método propio =>
 **Solo se puede invocar el constructor del padre al llamar el método propio que implementa *parent::__construct()***
 
 
