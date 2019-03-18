@@ -9,7 +9,7 @@ class ExtendsClass extends Person{
 
     public $skills = [];
 
-    public function __construct(array $skills, string $name = '', string $lastName = '', int $age = 0){
+    public function __construct(array $skills, string $name = null, string $lastName = null, int $age = null){
         $this->skills = $skills;
         parent::__construct($name, $lastName, $age);
     }
