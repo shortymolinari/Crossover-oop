@@ -8,6 +8,7 @@
 **Solo se puede invocar el destructor del padre al llamar el método propio que implementa *parent::__destruct()***
 
 ### Person.php 
+
 #### Heredando un destructor
 1. Extender una clase con un **destructor public** => **Ok se ejecuta automaticamente**
 2. Extender una clase con un **destructor protected** => **no detiene la ejecución del código y genera un Warning**
